@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zabawna Strona Internetowa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4500;
+        }
+        .fun-section {
+            margin: 20px 0;
+        }
+        .fun-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ffeb3b;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .links a:hover {
+            background-color: #ffc107;
+        }
+        .images img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+        #img1:checked ~ .images img:nth-of-type(1),
+        #img2:checked ~ .images img:nth-of-type(2),
+        #img3:checked ~ .images img:nth-of-type(3) {
+            display: block;
+        }
+        .buttons label {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Witaj na (testowej) Stronie Internetowej!</h1>
+
+    <div class="fun-section">
+        <h2>Random obrazki</h2>
+        <img src="https://picsum.photos/536/354" alt="Losowe zdjęcie">
+        <p></p>
+    </div>
+
+    <div class="fun-section">
+        <h2>Zabawne cytaty</h2>
+        <p>"Najlepszy sposób na przewidywanie przyszłości to jej tworzenie." - Peter Drucker</p>
+        <p>"Życie jest zbyt krótkie, by było poważne cały czas." - Nieznany</p>
+    </div>
+
+    <div class="fun-section links">
+        <h2>Popularne strony w Polsce</h2>
+        <a href="https://kwejk.pl" target="_blank">Kwejk</a>
+        <a href="https://demotywatory.pl" target="_blank">Demotywatory</a>
+        <a href="https://joemonster.org" target="_blank">Joe Monster</a>
+        <a href="https://chamsko.pl" target="_blank">Chamsko</a>
+        <a href="https://jeja.pl" target="_blank">Jeja</a>
+    </div>
+
+    <div class="fun-section">
+        <h2>Losowe fakty</h2>
+        <p>Czy wiesz, że ślimaki mogą spać nawet przez trzy lata?</p>
+        <p>Koala ma odciski palców prawie identyczne z ludzkimi.</p>
+    </div>
+
+    <footer>
+        <p>Strona stworzona dla Ciebie z uśmiechem :)</p>
+    </footer>
+
+    <fieldset class="buttons">
+        <input type="radio" id="img1" name="imageSelector" hidden>
+        <label for="img1">Pokaż obrazek 1</label>
+        
+        <input type="radio" id="img2" name="imageSelector" hidden>
+        <label for="img2">Pokaż obrazek 2</label>
+        
+        <input type="radio" id="img3" name="imageSelector" hidden>
+        <label for="img3">Pokaż obrazek 3</label>
+    
+        <div class="images">
+            <img src="1.webp" alt="Obrazek 1">
+            <img src="2.webp" alt="Obrazek 2">
+            <img src="3.webp" alt="Obrazek 3">
+        </div>
+    </fieldset>
+
+</body>
+</html>
