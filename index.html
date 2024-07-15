@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zabawna Strona Internetowa</title>
+    <script>
+        function toggleForm() {
+            const formContainer = document.getElementById('formContainer');
+            if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+                formContainer.style.display = 'block';
+            } else {
+                formContainer.style.display = 'none';
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Dodano');
+            document.getElementById('nameForm').reset();
+        }
+
+
+
+    </script>
+
     <style>
+        #formContainer {
+            display: none;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f8ff;
@@ -12,16 +37,20 @@
             text-align: center;
             padding: 20px;
         }
+
         h1 {
             color: #ff4500;
         }
+
         .fun-section {
             margin: 20px 0;
         }
+
         .fun-section img {
             max-width: 100%;
             height: auto;
         }
+
         .links a {
             display: inline-block;
             margin: 10px;
@@ -32,19 +61,23 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         .links a:hover {
             background-color: #ffc107;
         }
+
         .images img {
             display: none;
             max-width: 100%;
             height: auto;
         }
-        #img1:checked ~ .images img:nth-of-type(1),
-        #img2:checked ~ .images img:nth-of-type(2),
-        #img3:checked ~ .images img:nth-of-type(3) {
+
+        #img1:checked~.images img:nth-of-type(1),
+        #img2:checked~.images img:nth-of-type(2),
+        #img3:checked~.images img:nth-of-type(3) {
             display: block;
         }
+
         .buttons label {
             display: inline-block;
             margin: 5px;
@@ -54,11 +87,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        input[type="radio"] {
-            display: none;
-        }
     </style>
 </head>
+
 <body>
 
     <h1>Witaj na (testowej) Stronie Internetowej!</h1>
@@ -97,19 +128,31 @@
     <fieldset class="buttons">
         <input type="radio" id="img1" name="imageSelector" hidden>
         <label for="img1" id="testID1">Pokaż obrazek 1</label>
-        
+
         <input type="radio" id="img2" name="imageSelector" hidden>
         <label for="img2" id="testID2">Pokaż obrazek 2</label>
-        
+
         <input type="radio" id="img3" name="imageSelector" hidden>
         <label for="img3" id="testID3">Pokaż obrazek 3</label>
-    
+
         <div class="images">
             <img src="1.webp" alt="Obrazek 1">
             <img src="2.webp" alt="Obrazek 2">
             <img src="3.webp" alt="Obrazek 3">
         </div>
     </fieldset>
-
+    <button onclick="toggleForm()">Rozwiń</button>
+    <div id="formContainer">
+        <form id="nameForm" onsubmit="handleSubmit(event)">
+            <label for="firstName">Imię:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <br><br>
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
+
 </html>
