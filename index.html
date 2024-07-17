@@ -87,6 +87,43 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .emoticon-list {
+            list-style-position: inside;
+            padding: 0;
+        }
+        .emoticon-list li {
+            font-size: 24px;
+            margin: 10px 0;
+            list-style-type: none;
+        }
+        .emoticon-list li::before {
+            content: '•';
+            margin-right: 10px; 
+            color: black; 
+        }
+        footer {
+            padding: 1rem; 
+            margin-top: 1rem;
+            text-align: center;
+        }
+        body {
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .link-container {
+            list-style-position: inside;
+            padding: 0;
+            margin: 0px 0; 
+        }
+        .link-container li {
+            margin: 20px 0;
+        }
     </style>
 </head>
 
@@ -121,9 +158,26 @@
         <p>Koala ma odciski palców prawie identyczne z ludzkimi.</p>
     </div>
 
-    <footer>
-        <p>Strona stworzona dla Ciebie z uśmiechem :)</p>
-    </footer>
+    <h1 style="color: orange;">Top 10 Emotów w 2024</h1>
+    <ul class="emoticon-list">
+        <li>😂 - Face with Tears of Joy</li>
+        <li>❤️ - Red Heart</li>
+        <li>🥺 - Pleading Face</li>
+        <li>😍 - Smiling Face with Heart-Eyes</li>
+        <li>🤣 - Rolling on the Floor Laughing</li>
+        <li>😊 - Smiling Face with Smiling Eyes</li>
+        <li>🥰 - Smiling Face with Hearts</li>
+        <li>😎 - Smiling Face with Sunglasses</li>
+        <li>😭 - Loudly Crying Face</li>
+        <li>🙏 - Folded Hands</li>
+    </ul>
+
+    <p>Linki do darmowych playlist:</p>
+    <ul class="link-container">
+        <li><a href="https://pixabay.com/pl/playlists/">Pixabay Playlists</a></li>
+        <li><a href="https://www.jango.com/browse_music/genre/Recommended">Jango Recommended Music</a></li>
+        <li><a href="https://www.freefy.app/popular">Freefy Popular Music</a></li>
+    </ul>
 
     <fieldset class="buttons">
         <input type="radio" id="img1" name="imageSelector" hidden>
@@ -153,6 +207,11 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
