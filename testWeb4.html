@@ -4,8 +4,118 @@
     <meta charset="UTF-8">
     <title>Pliki</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .rating-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            color: #fff;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .stars span {
+            font-size: 50px;
+            color: #ccc; 
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+    </style>
 </head>
 <body>
+    <div>
+        <div class="rating-container">
+            <div class="emoji">🙂</div>
+            <div class="description">Select a rating</div>
+            <div class="stars">
+                <span data-rating="1">⭐</span>
+                <span data-rating="2">⭐</span>
+                <span data-rating="3">⭐</span>
+                <span data-rating="4">⭐</span>
+                <span data-rating="5">⭐</span>
+            </div>
+        </div>
+        
+        <script>
+            const stars = document.querySelectorAll('.stars span');
+            const emoji = document.querySelector('.emoji');
+            const description = document.querySelector('.description');
+            let selectedRating = 0;
+        
+            const ratings = [
+                { emoji: "😞", text: "Very Poor" },
+                { emoji: "😐", text: "Poor" },
+                { emoji: "🙂", text: "Good" },
+                { emoji: "😄", text: "Very Good" },
+                { emoji: "😍", text: "Excellent" }
+            ];
+        
+            stars.forEach(star => {
+                star.addEventListener('mouseover', () => {
+                    const rating = star.getAttribute('data-rating');
+                    highlightStars(rating);
+                });
+        
+                star.addEventListener('mouseout', () => {
+                    if (selectedRating === 0) {
+                        clearStars();
+                    } else {
+                        highlightStars(selectedRating);
+                    }
+                });
+        
+                star.addEventListener('click', () => {
+                    selectedRating = star.getAttribute('data-rating');
+                    updateRating(selectedRating);
+                });
+            });
+        
+            function highlightStars(rating) {
+                stars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.classList.add('hover');
+                    } else {
+                        star.classList.remove('hover');
+                    }
+                });
+            }
+        
+            function clearStars() {
+                stars.forEach(star => {
+                    star.classList.remove('hover');
+                });
+            }
+        
+            function updateRating(rating) {
+                stars.forEach((star, index) => {
+                    star.classList.toggle('active', index < rating);
+                    star.classList.remove('hover');
+                });
+                emoji.textContent = ratings[rating - 1].emoji;
+                description.textContent = ratings[rating - 1].text;
+            }
+        </script>
+    </div><br>
+    
     <h1>Pobieranie pliku</h1>
     <input type="file" id="myFile">
 </body>
