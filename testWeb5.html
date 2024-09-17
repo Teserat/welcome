@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona testowa z wszystkimi elementami HTML</title>
+</head>
+<body>
+
+    <!-- Nagłówki -->
+    <h1>Nagłówek h1</h1>
+    <h2>Nagłówek h2</h2>
+    <h3>Nagłówek h3</h3>
+    <h4>Nagłówek h4</h4>
+    <h5>Nagłówek h5</h5>
+    <h6>Nagłówek h6</h6>
+
+    <!-- Akapit i formatowanie tekstu -->
+    <p>To jest przykładowy akapit z <strong>pogrubionym</strong>, <em>pochylonym</em>, <u>podkreślonym</u> i <s>przekreślonym</s> tekstem.</p>
+    <p>Użycie elementów <mark>mark</mark>, <small>small</small>, <del>del</del>, <ins>ins</ins>, <sub>sub</sub> i <sup>sup</sup>.</p>
+    <p>Inne elementy tekstowe: <i>italic</i>, <b>bold</b>, <cite>cite</cite>, <q>krótki cytat</q>, <abbr title="HyperText Markup Language">HTML</abbr>, <dfn>definicja</dfn>, <var>zmienna</var>, <samp>sample output</samp>, <kbd>klawisz</kbd>, <code>kod</code>, <bdo dir="rtl">Tekst od prawej do lewej</bdo>, <bdi>Izolowany tekst</bdi>, <wbr>Łamanie<wbr> linii</p>
+
+    <!-- Cytaty -->
+    <blockquote>
+        To jest cytat blokowy.
+    </blockquote>
+
+    <!-- Listy -->
+    <ul>
+        <li>Element listy nieuporządkowanej 1</li>
+        <li>Element listy nieuporządkowanej 2</li>
+        <li>Element listy nieuporządkowanej 3</li>
+    </ul>
+
+    <ol>
+        <li>Element listy uporządkowanej 1</li>
+        <li>Element listy uporządkowanej 2</li>
+        <li>Element listy uporządkowanej 3</li>
+    </ol>
+
+    <dl>
+        <dt>Termin 1</dt>
+        <dd>Definicja terminu 1</dd>
+        <dt>Termin 2</dt>
+        <dd>Definicja terminu 2</dd>
+    </dl>
+
+    <!-- Linki i kotwice -->
+    <p>Odwiedź naszą <a href="https://www.przyklad.pl">stronę główną</a>.</p>
+    <p><a href="#sekcja1">Przejdź do sekcji 1</a></p>
+
+    <!-- Obrazy -->
+    <img src="obraz.jpg" alt="Opis obrazka" width="200" height="100">
+    <figure>
+        <img src="obraz2.jpg" alt="Obrazek z podpisem">
+        <figcaption>Podpis obrazka</figcaption>
+    </figure>
+
+    <!-- Mapy obrazów -->
+    <img src="plan.jpg" usemap="#mapa">
+    <map name="mapa">
+        <area shape="rect" coords="34,44,270,350" href="strona1.html" alt="Obszar 1">
+        <area shape="circle" coords="337,300,44" href="strona2.html" alt="Obszar 2">
+    </map>
+
+    <!-- Multimedia -->
+    <video width="320" height="240" controls>
+        <source src="film.mp4" type="video/mp4">
+        <source src="film.ogg" type="video/ogg">
+        Twoja przeglądarka nie obsługuje elementu video.
+    </video>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Twoja przeglądarka nie obsługuje elementu audio.
+    </audio>
+
+    <!-- Canvas -->
+    <canvas id="myCanvas" width="200" height="100">
+        Twoja przeglądarka nie obsługuje elementu canvas.
+    </canvas>
+
+    <!-- SVG -->
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <!-- Iframe -->
+    <iframe src="https://www.przyklad.pl" width="300" height="200">
+        Twoja przeglądarka nie obsługuje elementu iframe.
+    </iframe>
+
+    <!-- Noscript -->
+    <noscript>
+        Twoja przeglądarka nie obsługuje JavaScript lub jest on wyłączony.
+    </noscript>
+
+    <!-- Formularze -->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Dane osobowe</legend>
+
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="haslo">Hasło:</label>
+            <input type="password" id="haslo" name="haslo"><br><br>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data"><br><br>
+
+            <label for="kolor">Wybierz kolor:</label>
+            <input type="color" id="kolor" name="kolor"><br><br>
+
+            <label for="plik">Wybierz plik:</label>
+            <input type="file" id="plik" name="plik"><br><br>
+
+            <input type="checkbox" id="zgoda" name="zgoda">
+            <label for="zgoda">Akceptuję regulamin</label><br><br>
+
+            <label>Wybierz opcję:</label><br>
+            <input type="radio" id="opcja1" name="wybor" value="1">
+            <label for="opcja1">Opcja 1</label><br>
+            <input type="radio" id="opcja2" name="wybor" value="2">
+            <label for="opcja2">Opcja 2</label><br><br>
+
+            <label for="datalist">Wybierz z listy:</label>
+            <input list="lista" id="datalist" name="datalist">
+            <datalist id="lista">
+                <option value="Opcja A">
+                <option value="Opcja B">
+                <option value="Opcja C">
+            </datalist><br><br>
+
+            <label for="select">Wybierz opcję z listy rozwijanej:</label>
+            <select id="select" name="select">
+                <optgroup label="Grupa 1">
+                    <option value="1">Opcja 1</option>
+                    <option value="2">Opcja 2</option>
+                </optgroup>
+                <optgroup label="Grupa 2">
+                    <option value="3">Opcja 3</option>
+                    <option value="4">Opcja 4</option>
+                </optgroup>
+            </select><br><br>
+
+            <label for="opis">Opis:</label><br>
+            <textarea id="opis" name="opis" rows="4" cols="50"></textarea><br><br>
+
+            <label for="zakres">Wybierz zakres:</label>
+            <input type="range" id="zakres" name="zakres" min="1" max="100"><br><br>
+
+            <label for="liczba">Wpisz liczbę:</label>
+            <input type="number" id="liczba" name="liczba" min="1" max="10"><br><br>
+
+            <output name="wynik" for="liczba">0</output><br><br>
+
+            <button type="submit">Wyślij</button>
+            <button type="reset">Resetuj</button>
+        </fieldset>
+    </form>
+
+    <!-- Tabele -->
+    <table border="1">
+        <caption>Tytuł tabeli</caption>
+        <colgroup>
+            <col span="2" style="background-color:yellow">
+            <col style="background-color:green">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Kolumna 1</th>
+                <th>Kolumna 2</th>
+                <th>Kolumna 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dane 1</td>
+                <td>Dane 2</td>
+                <td>Dane 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Dane 4</td>
+                <td>Dane 5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Stopka 1</td>
+                <td>Stopka 2</td>
+                <td>Stopka 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Elementy semantyczne -->
+    <header>
+        <h2>Nagłówek strony</h2>
+        <nav>
+            <ul>
+                <li><a href="#sekcja1">Sekcja 1</a></li>
+                <li><a href="#sekcja2">Sekcja 2</a></li>
+                <li><a href="#sekcja3">Sekcja 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sekcja1">
+            <h3>Sekcja 1</h3>
+            <p>Treść sekcji 1.</p>
+        </section>
+        <section id="sekcja2">
+            <h3>Sekcja 2</h3>
+            <p>Treść sekcji 2.</p>
+        </section>
+        <article>
+            <h4>Artykuł</h4>
+            <p>Treść artykułu.</p>
+        </article>
+        <aside>
+            <h4>Informacje dodatkowe</h4>
+            <p>Treść poboczna.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Stopka strony.</p>
+    </footer>
+
+    <!-- Elementy interaktywne -->
+    <details>
+        <summary>Kliknij, aby rozwinąć</summary>
+        <p>Ukryta treść.</p>
+    </details>
+
+    <!-- Element template -->
+    <template id="myTemplate">
+        <p>To jest zawartość szablonu.</p>
+    </template>
+
+    <!-- Element script -->
+    <script>
+        console.log('To jest skrypt JavaScript.');
+    </script>
+
+    <!-- Element style -->
+    <style>
+        p { color: blue; }
+    </style>
+
+    <!-- Element object -->
+    <object data="plik.swf" type="application/x-shockwave-flash" width="400" height="300">
+        Alternatywna zawartość dla przeglądarek nieobsługujących obiektów.
+    </object>
+
+    <!-- Element embed -->
+    <embed src="plik.swf" width="400" height="300">
+
+    <!-- Elementy tekstowe -->
+    <pre>
+        To jest
+        tekst preformatowany.
+    </pre>
+
+    <code>
+        &lt;p&gt;To jest kod HTML&lt;/p&gt;
+    </code>
+
+    <!-- Element time -->
+    <p>Aktualna data i czas: <time datetime="2024-09-17T12:00">17 września 2024, 12:00</time></p>
+
+    <!-- Element address -->
+    <address>
+        Napisz do nas: <a href="mailto:kontakt@przyklad.pl">kontakt@przyklad.pl</a><br>
+        Odwiedź nas: ul. Przykładowa 1, 00-000 Miasto
+    </address>
+
+    <!-- Element progress -->
+    <progress value="70" max="100">70%</progress>
+
+    <!-- Element meter -->
+    <meter value="2" min="0" max="10">2 out of 10</meter>
+
+    <!-- Element ruby -->
+    <ruby>
+        漢 <rt>Kan</rt>
+        字 <rt>ji</rt>
+    </ruby>
+
+    <!-- Linie poziome i łamanie linii -->
+    <hr>
+    <p>Tekst przed<br>łamaniem linii.</p>
+
+    <!-- Komentarz HTML -->
+    <!-- To jest komentarz -->
+
+    <!-- Wstawki znaków specjalnych -->
+    <p>Znaki specjalne: &amp; &lt; &gt; &quot; &apos;</p>
+
+    <!-- Element wbr -->
+    <p>To jest bardzo długa<wbr>linia tekstu, która może<wbr>zostać złamana.</p>
+    <dialog open>
+        <p>To jest okno dialogowe.</p>
+        <button>Ok</button>
+    </dialog>
+    <!-- Element noscript -->
+    <noscript>
+        Twoja przeglądarka nie obsługuje JavaScript lub jest on wyłączony.
+    </noscript>
+
+</body>
+</html>
