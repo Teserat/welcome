@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Waitów w Selenium</title>
+        <script type="text/javascript">
+            function showHello() {
+                setTimeout(function() {
+                    var helloDiv = document.createElement("div");
+                    helloDiv.id = "hello";
+                    helloDiv.innerText = "Hello";
+                    document.body.appendChild(helloDiv);
+                }, 3000); // 3 sekundy
+            }
+            window.onload = showHello;
+        </script>
+    </head>
+    <body>
+        <h1>Testowanie Waitów w Selenium</h1>
+    </body>
+    </html>
