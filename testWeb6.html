@@ -7,11 +7,18 @@
     <script type="text/javascript">
         function showHello() {
             setTimeout(function () {
+                var fastDiv = document.createElement("div");
+                fastDiv.id = "fast";
+                fastDiv.innerText = "----";
+                document.body.appendChild(fastDiv);
+            }, 1000);
+
+            setTimeout(function () {
                 var helloDiv = document.createElement("div");
                 helloDiv.id = "hello";
                 helloDiv.innerText = "Hello";
                 document.body.appendChild(helloDiv);
-            }, 3000); // 3 sekundy
+            }, 3000);
         }
         window.onload = showHello;
     </script>
